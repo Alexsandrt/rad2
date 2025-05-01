@@ -3,7 +3,7 @@ version:  '3.8'
 services:
   app:
    image: openjdk:21-jdk-slim
-  coteiner_name: pervai
+  cotainer_name: pervai
   build:
     context: .
     dockerfile: Dockerfile
