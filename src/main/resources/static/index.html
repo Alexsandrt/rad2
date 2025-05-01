@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Text</title>
+</head>
+<body>
+<h1>Add Text</h1>
+<form id="textForm">
+    <label for="text">Text:</label>
+    <textarea id="text" name="text" required></textarea><br><br>
+    <button type="submit">Add Text</button>
+</form>
+
+<script>
+    document.getElementById('textForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const text = document.getElementById('text').value;
+        fetch('/texts/add', {
+            method: 'POST',
+            body: new URLSearchParams({ text: text })
+        })
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+</body>
+</html>
