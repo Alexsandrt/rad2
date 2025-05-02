@@ -2,7 +2,7 @@ spring:
   application:
     name: rad2
   datasource:
-    url: jdbc:postgresql://db:5437/ct
+    url: jdbc:postgresql://db:5432/ct
     username: postgres
     password: qwert
   jpa:
