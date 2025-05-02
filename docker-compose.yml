@@ -1,9 +1,9 @@
-version:  '3.8'
+version:  '3.8'b
 
 services:
   app:
    image: openjdk:21-jdk-slim
-  cotainer_name: pervai
+  container_name: pervai
   build:
     context: .
     dockerfile: Dockerfile
