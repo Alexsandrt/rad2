@@ -1,1 +1,1 @@
-create database ct;
+create database texts;
